@@ -1,0 +1,226 @@
+﻿
+@{
+    if (ViewBag.Role != 4 && ViewBag.Role != 5)
+    {
+    <ul class="vertical-nav-menu">
+        <li class="app-sidebar__heading">Dashboard</li>
+        <li>
+            <a href="/Administrator/Dashboard/index">
+                <i class="metismenu-icon pe-7s-graph2"></i>Trang chủ
+            </a>
+        </li>
+        <li class="app-sidebar__heading">Giới thiệu</li>
+
+        <li>
+            <a href="/Administrator/Informs/GetInfor">
+                <i class="metismenu-icon pe-7s-graph2"></i>Đơn vị chủ quản
+            </a>
+        </li>
+        <li>
+            <a href="/Administrator/Slideshows/SlideshowGetList">
+                <i class="metismenu-icon pe-7s-graph2"></i>Slideshow
+            </a>
+        </li>
+        <li>
+            <a href="/Administrator/Contacts/ContactGetList">
+                <i class="metismenu-icon pe-7s-graph2"></i>Danh sách liên hệ
+            </a>
+        </li>
+        <li>
+            <a href="/Administrator/Contacts/DatLichGetList">
+                <i class="metismenu-icon pe-7s-graph2"></i>Danh sách đặt lịch
+            </a>
+        </li>
+        <li class="app-sidebar__heading">Chức năng</li>
+        <li>
+            <a href="/Administrator/Doitac/DoitacGetList">
+                <i class="metismenu-icon pe-7s-graph2"></i>Khách hàng tiêu biểu
+            </a>
+        </li>
+        <li>
+            <a href="/Administrator/CustomerIdea/CustomerIdeaGetList">
+                <i class="metismenu-icon pe-7s-graph2"></i>Đánh giá khách hàng
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="metismenu-icon pe-7s-browser"></i>Quản lý bài viết
+                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+            </a>
+            <ul>
+                <li>
+                    <a href="/Administrator/NewsCategories/NewCategoriesGetList">
+                        <i class="metismenu-icon"></i> Danh mục bài viết
+                    </a>
+                </li>
+                <li>
+                    <a href="/Administrator/news/NewsGetList">
+                        <i class="metismenu-icon"></i>Tất cả bài viết
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li id="qlsp">
+            <a href="#">
+                <i class="metismenu-icon pe-7s-plugin"></i>Quản lý sản phẩm
+                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+            </a>
+            <ul>
+                <li>
+                    <a id="dmsp" href="/Administrator/ProductCategory/getlist">
+                        <i class="metismenu-icon"></i>Danh mục sản phẩm
+                    </a>
+                </li>
+                <li>
+                    <a id="dssp" href="/Administrator/products/ProductsGetList">
+                        <i class="metismenu-icon"></i>Danh sách sản phẩm
+                    </a>
+                </li>
+                <li>
+
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <i class="metismenu-icon pe-7s-plugin"></i>Quản lý đơn hàng
+                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+            </a>
+            <ul>
+                <li>
+                    <a href="/Administrator/Orders/Orders">
+                        <i class="metismenu-icon"></i>Danh sách đơn hàng
+                    </a>
+                </li>
+                <li>
+                    <a href="/Administrator/donhangtragop/DonHangTraGop">
+                        <i class="metismenu-icon"></i>Đơn hàng trả góp
+                    </a>
+                </li>
+                <li>
+                    <a href="/Administrator/Bank/BankGetList">
+                        <i class="metismenu-icon"></i>Danh sách ngân hàng
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li id="qlcm">
+            <a href="#">
+                <i class="metismenu-icon pe-7s-plugin"></i>Quản lý Comment
+                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+            </a>
+            <ul>
+                <li>
+                    <a id="dscm" href="/Administrator/Commnents/Getlistcomment">
+                        <i class="metismenu-icon"></i>Danh sách Comment
+                    </a>
+                </li>
+                <li>
+                    <a id="dscmtt" href="/Administrator/CommentNews/GetlistNewcomment">
+                        <i class="metismenu-icon"></i>Danh sách Comment Tin tức
+                    </a>
+                </li>
+                <li>
+                    <a href="/Administrator/donhangtragop/DonHangTraGop">
+                        <i class="metismenu-icon"></i>Danh sách khách hàng
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="app-sidebar__heading">Thiết lập</li>
+        <li>
+            <a href="/Administrator/Settings/Index">
+                <i class="metismenu-icon pe-7s-graph2"></i>Cấu hình chung
+            </a>
+        </li>
+        <li>
+            <a href="/Administrator/Scripts/Index">
+                <i class="metismenu-icon pe-7s-graph2"></i>Quản lý seo
+            </a>
+        </li>
+    </ul>
+    }
+    else
+    {
+        if (ViewBag.Role == 5)
+        {
+            <ul class="vertical-nav-menu">
+                <li>
+                    <a href="#">
+                        <i class="metismenu-icon pe-7s-browser"></i>Quản lý bài viết
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="/Administrator/news/NewsGetList">
+                                <i class="metismenu-icon"></i>Tất cả bài viết
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        }
+        if (ViewBag.Role == 4)
+        {
+<ul class="vertical-nav-menu">
+    <li id="qlsp">
+        <a href="#">
+            <i class="metismenu-icon pe-7s-plugin"></i>Quản lý sản phẩm
+            <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+        </a>
+        <ul>
+
+            <li>
+                <a id="dssp" href="/Administrator/products/ProductsGetList">
+                    <i class="metismenu-icon"></i>Danh sách sản phẩm
+                </a>
+            </li>
+            <li>
+
+        </ul>
+    </li>
+    <li>
+        <a href="#">
+            <i class="metismenu-icon pe-7s-plugin"></i>Quản lý đơn hàng
+            <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+        </a>
+        <ul>
+            <li>
+                <a href="/Administrator/Orders/Orders">
+                    <i class="metismenu-icon"></i>Danh sách đơn hàng
+                </a>
+            </li>
+            <li>
+                <a href="/Administrator/donhangtragop/DonHangTraGop">
+                    <i class="metismenu-icon"></i>Đơn hàng trả góp
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li id="qlcm">
+        <a href="#">
+            <i class="metismenu-icon pe-7s-plugin"></i>Quản lý Comment
+            <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+        </a>
+        <ul>
+            <li >
+                <a id="dscm" href="/Administrator/Commnents/Getlistcomment">
+                    <i class="metismenu-icon"></i>Danh sách Comment
+                </a>
+            </li>
+            <li>
+                <a id="dscmtt" href="/Administrator/CommentNews/GetlistNewcomment">
+                    <i class="metismenu-icon"></i>Danh sách Comment Tin tức
+                </a>
+            </li>
+            <li>
+                <a href="/Administrator/donhangtragop/DonHangTraGop">
+                    <i class="metismenu-icon"></i>Danh sách khách hàng
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>
+        }
+
+    }
+}
